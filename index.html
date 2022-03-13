@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>База знаний</title>
+  <link rel="stylesheet" href="css/choices.min.css">
+  <link rel="stylesheet" href="css/simplebar.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="./js/popper.min.js"></script>
+  <script defer src="./js/tippy-bundle.umd.js"></script>
+  <script defer src="./js/inputmask.min.js"></script>
+  <script defer src="./js/just-validate.min.js"></script>
+  <script defer src="./js/choices.min.js"></script>
+  <script defer src="https://api-maps.yandex.ru/2.1/?apikey=5aa77260-0e49-4e5c-a513-53e068ad8282&lang=ru_RU"></script>
+  <script defer src="./js/simplebar.min.js"></script>
+  <script defer src="./js/main.js"></script>
+</head>
+
+<body>
+  <h1 class="visually-hidden">База знаний</h1>
+
+  <div class="wrapper">
+    <!-- Checkbox -->
+    <section class="checkbox-section">
+      <h2 class="checkbox-section__title">Категории:</h2>
+
+      <label class="checkbox" for="dinosaurs">
+        <input
+          class="checkbox__input visually-hidden"
+          type="checkbox"
+          value="Динозавры"
+          name="check"
+          id="dinosaurs"
+        >
+          Динозавры
+        <span class="checkbox__box"></span>
+      </label>
+
+      <label class="checkbox" for="bears">
+        <input
+          class="checkbox__input visually-hidden"
+          type="checkbox"
+          value="Согласен на обработку данных"
+          name="check"
+          id="bears"
+        />
+          Медведи
+        <span class="checkbox__box"></span>
+      </label>
+
+      <label class="checkbox" for="deers">
+        <input
+          class="checkbox__input visually-hidden"
+          type="checkbox"
+          value="Согласен на обработку данных"
+          name="check"
+          id="deers"
+        />
+          Косули
+        <span class="checkbox__box"></span>
+      </label>
+
+      <label class="checkbox" for="foxes">
+        <input
+          class="checkbox__input visually-hidden"
+          type="checkbox"
+          value="Согласен на обработку данных"
+          name="check"
+          id="foxes"
+        />
+          Лисы
+        <span class="checkbox__box"></span>
+      </label>
+
+      <label class="checkbox" for="wolves">
+        <input
+          class="checkbox__input visually-hidden"
+          type="checkbox"
+          value="Согласен на обработку данных"
+          name="check"
+          id="wolves"
+        />
+          Волки
+        <span class="checkbox__box"></span>
+      </label>
+
+      <label class="checkbox" for="deers-and-elks">
+        <input
+          class="checkbox__input visually-hidden"
+          type="checkbox"
+          value="Согласен на обработку данных"
+          name="check"
+          id="deers-and-elks"
+        />
+          Олени и лоси
+        <span class="checkbox__box"></span>
+      </label>
+    </section>
+    <!-- Select -->
+    <section class="select-section">
+      <h2 class="visually-hidden">Выбор материала</h2>
+      <select class="select-default" name="Материал" id="Материал">
+        <option value="Материал">Материал</option>
+        <option value="Древесина">Древесина</option>
+        <option value="Металл">Металл</option>
+        <option value="Камень">Камень</option>
+        <option value="Пластик">Пластик</option>
+        <option value="Композитный">Композитный</option>
+        <option value="Гипс">Гипс</option>
+      </select>
+    </section>
+    <!-- Yandex-карта -->
+    <section class="map-section">
+      <h2 class="visually-hidden">Место на карте</h2>
+      <p class="map-section__text">В качестве адреса для маркера используйте: Франция, Иль-де-Франс, Париж, X округ Парижа, улица дю Фобур Сен Дени  54</p>
+      <div class="map" id="map"></div>
+    </section>
+    <!-- Scroll -->
+    <section class="scroll-section">
+      <h2 class="visually-hidden">Кастомный Scroll</h2>
+      <div class="scroll-section__text content" data-simplebar>
+        <p class="content__text">
+          Сложно сказать, почему многие известные личности представлены в исключительно положительном свете. Лишь активно развивающиеся страны третьего мира будут объективно рассмотрены соответствующими инстанциями. Мы вынуждены отталкиваться от того, что высокотехнологичная концепция общественного уклада представляет собой интересный эксперимент проверки глубокомысленных рассуждений. Имеется спорная точка зрения, гласящая примерно следующее: непосредственные участники технического прогресса освещают чрезвычайно интересные особенности картины в целом, однако конкретные выводы, разумеется, обнародованы. Значимость этих проблем настолько очевидна, что социально-экономическое развитие, а также свежий взгляд на привычные вещи - безусловно открывает новые горизонты для первоочередных требований.
+        </p>
+    </div>
+    </section>
+    <!-- Form -->
+    <section class="form-section">
+      <form class="form" action="" method="POST">
+        <label class="form-label">
+          <input class="form__input name" type="text" name="Name" placeholder="Имя*" data-validate-field="name">
+        </label>
+        <label for="" class="form-label">
+          <input class="form__input phone" type="tel" name="Phone" placeholder="Телефон*" data-validate-field="tel" data-validate-rules="tel">
+        </label>
+        <label for="" class="form-label">
+          <input class="form__input email" type="email" name="Email" placeholder="E-mail*" data-validate-field="email">
+        </label>
+        <button class="form__btn" type="submit">Заказать</button>
+    </form>
+    </section>
+    <!-- Tooltip -->
+    <section class="tooltip-section">
+      <h2 class="visually-hidden">Тултип</h2>
+        <p class="tooltip-section__text">
+          Следует отметить, что<br>социально-экономическое развитие способствует повышению качества переосмысления внешнеэкономических политик.
+          <span class="marker" tabindex="0">
+            <svg width="16" height="16" viewox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM8 3C7.33333 3 7 3.31919 7 3.95758C7 4.60026 7.33333 4.92159 8 4.92159C8.33333 4.92159 8.58233 4.83805 8.74699 4.67095C8.91566 4.49957 9 4.26178 9 3.95758C9 3.31919 8.66667 3 8 3ZM7.07831 13H8.91566V5.81491H7.07831V13Z" fill="#BCBCBC"/>
+              </svg>
+          </span>
+        </p>
+    </section>
+  </div>
+</body>
+</html>
