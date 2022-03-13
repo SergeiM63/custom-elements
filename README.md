@@ -1,5 +1,5 @@
 # custom-elements
-(Click to OPEN)[https://sergeim63.github.io/custom-elements/]
+[Click to OPEN](https://sergeim63.github.io/custom-elements)
 
 1. Custom Checkbox
 2. Custom Select (Choices JS)
