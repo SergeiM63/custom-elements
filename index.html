@@ -129,15 +129,17 @@
     </section>
     <!-- Form -->
     <section class="form-section">
-      <form class="form" action="" method="POST">
-        <label class="form-label">
-          <input class="form__input name" type="text" name="Name" placeholder="Имя*" data-validate-field="name">
+      <h2 class="visually-hidden">Секция Формы</h2>
+
+      <form class="form" action="#" method="POST">
+        <label for="name" class="form-label">
+          <input class="form__input name" id="name" type="text" name="Name" placeholder="Имя*" data-validate-field="name">
         </label>
-        <label for="" class="form-label">
-          <input class="form__input phone" type="tel" name="Phone" placeholder="Телефон*" data-validate-field="tel" data-validate-rules="tel">
+        <label for="phone" class="form-label">
+          <input class="form__input phone" id="phone" type="tel" name="Phone" placeholder="Телефон*" data-validate-field="tel" data-validate-rules="tel">
         </label>
-        <label for="" class="form-label">
-          <input class="form__input email" type="email" name="Email" placeholder="E-mail*" data-validate-field="email">
+        <label for="mail" class="form-label">
+          <input class="form__input email" id="mail" type="email" name="Email" placeholder="E-mail*" data-validate-field="email">
         </label>
         <button class="form__btn" type="submit">Заказать</button>
     </form>
@@ -148,7 +150,7 @@
         <p class="tooltip-section__text">
           Следует отметить, что<br>социально-экономическое развитие способствует повышению качества переосмысления внешнеэкономических политик.
           <span class="marker" tabindex="0">
-            <svg width="16" height="16" viewox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM8 3C7.33333 3 7 3.31919 7 3.95758C7 4.60026 7.33333 4.92159 8 4.92159C8.33333 4.92159 8.58233 4.83805 8.74699 4.67095C8.91566 4.49957 9 4.26178 9 3.95758C9 3.31919 8.66667 3 8 3ZM7.07831 13H8.91566V5.81491H7.07831V13Z" fill="#BCBCBC"/>
               </svg>
           </span>

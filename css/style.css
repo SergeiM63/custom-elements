@@ -223,7 +223,7 @@ body {
 
  .simplebar-scrollbar.simplebar-visible.simplebar-scrollbar::before {
   width: 6px;
-  height: 70px;
+  height: 100%;
   background-color: #ccb26e;
   opacity: 1;
 }

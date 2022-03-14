@@ -53,12 +53,12 @@ document.addEventListener('DOMContentLoaded', () => {
   //---------------------------------------------------------------------------
   // Валидация Form
   //---------------------------------------------------------------------------
-  const selector = document.querySelectorAll("input[type='tel']");
+  const selector = document.querySelector("input[type='tel']");
 
   const im = new Inputmask("+7 (999)-999-99-99");
   im.mask(selector);
 
-  new window.JustValidate('.form', {
+  new JustValidate('.form', {
     rules: {
       name: {
         required: true,
@@ -67,7 +67,10 @@ document.addEventListener('DOMContentLoaded', () => {
       },
       tel: {
         required: true,
-        minLength: 10,
+        function: (name, value) => {
+          const phone = selector.inputmask.unmaskedvalue();
+          return Number(phone) && phone.length === 10;
+        },
       },
       email: {
         required: true,
@@ -78,14 +81,15 @@ document.addEventListener('DOMContentLoaded', () => {
     messages: {
       name: {
         required: 'Как вас зовут?',
-        minLength: 'Имя должно содержать больше двух символов'
+        minLength: 'Имя должно содержать больше букв',
       },
       tel: {
         required: 'Укажите ваш телефон',
-        minLength: 'Телефон содержит 10 символов',
+        function: 'Введите 10 цифр',
+
       },
-      email: 'Укажите ваш email'
-    }
+      email: 'Укажите ваш email',
+    },
   });
 
   //---------------------------------------------------------------------------
@@ -93,8 +97,6 @@ document.addEventListener('DOMContentLoaded', () => {
   //---------------------------------------------------------------------------
   tippy('.marker', {
     content: 'Глава 2, страница 176',
-    duration: 300,
-    trigger: 'click',
   });
 });
 
